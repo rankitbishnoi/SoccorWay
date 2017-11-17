@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="eplApp">
 <head>
-  <!--Import Google Icon Font-->
-  <link ui-sref="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
-  <link rel="stylesheet" ui-sref="css/materialize.min.css">
+  <link rel="stylesheet" ui-sref="css/bootstrap.min.css">
 
 
   <!--Let browser know website is optimized for mobile-->
@@ -76,36 +74,31 @@
 <body>
   <script src="https://use.fontawesome.com/5aafece338.js"></script>
 
+  <nav class="navbar navbar-expand-md" ng-controller="yearController as myYear">
+    <a class="navbar-brand" ui-sref="home"><img src="img/logo.png" class="responsive-img" id="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <nav ng-controller="yearController as myYear">
-    <div class="nav-wrapper">
-      <a ui-sref="home" class="brand-logo"><img src="img/logo.png" class="responsive-img" id="logo"></a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a ui-sref="matches">Matches</a></li>
-        <li><a ui-sref="table">Table</a></li>
-        <li><a ui-sref="teams">Teams</a></li>
-        <li>
-          <form action="#">
-            <input name="group1" ng-model="myYear.year" type="radio" id="2015/16" value="2015/16" ng-click="myYear.change()"/>
-            <label for="2015/16">2015/16</label>
-            <input name="group1" ng-model="myYear.year" type="radio" id="2016/17" value="2016/17" ng-click="myYear.change()"/>
-            <label for="2016/17">2016/17</label>    
-          </form>     
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" ui-sref="matches">Matches <span class="sr-only">(current)</span></a>
         </li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a ui-sref="matches">Matches</a></li>
-        <li><a ui-sref="table">Table</a></li>
-        <li><a ui-sref="teams">Teams</a></li>
+        <li class="nav-item active">
+          <a class="nav-link" ui-sref="table">Table <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" ui-sref="teams">Teams <span class="sr-only">(current)</span></a>
+        </li>
         <li>
           <form action="#" ng-model="myApp.year">
             <input name="group1" ng-model="myYear.year" type="radio" id="2015/16" value="2015/16" ng-click="myYear.change()" />
-            <label for="2015/16" style="color: black">2015/16</label><br>
+            <label for="2015/16">2015/16</label>
             <input name="group1" ng-model="myYear.year" type="radio" id="2016/17" value="2016/17" ng-click="myYear.change()" />
             <label for="2016/17" style="color: black">2016/17</label>    
           </form>       
-        </li>
+        </li>        
       </ul>
     </div>
   </nav>
@@ -119,10 +112,9 @@
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
-  <script src="js/materialize.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript" src="js/routing.js"></script>
-  <script src="js/materialize.min.js"></script>
 </body>
 
 </html>
