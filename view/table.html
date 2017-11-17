@@ -1,0 +1,44 @@
+<section id="leagueTable" class="container" ng-controller="tableController as myTable" ng-init="myTable.loadAllData()">
+      <div class="card-panel hoverable">
+        <h4>League table<i class="material-icons">arrow_forward</i><hr>
+          <form action="#">
+            <p class="range-field">
+              <label for="test5">Select Week: </label>
+              <input type="range" id="test5" min="1" max="38" ng-model="myTable.weekSelect" ng-change="myTable.callManipulation()" />
+            </p>
+          </form>
+        </h4> <h6>Week : {{myTable.weekSelect}}</h6><hr>
+        <table class="striped highlight bordered">
+          <thead>
+            <tr>
+              <th class="hide-on-small-only"><a class="tooltipped" data-position="top" data-delay="50" data-tooltip="Rank">#</a></th>
+              <th>Team</th>
+              <th><a class="tooltipped" data-position="top" data-delay="50" data-tooltip="Matches Played">MP</a></th>
+              <th><a class="tooltipped" data-position="top" data-delay="50" data-tooltip="Wins">W</a></th>
+              <th><a class="tooltipped" data-position="top" data-delay="50" data-tooltip="Draws">D</a></th>
+              <th><a class="tooltipped" data-position="top" data-delay="50" data-tooltip="Losses">L</a></th>
+              <th class="hide-on-small-only"><a class="tooltipped" data-position="top" data-delay="50" data-tooltip="Goals for">F</a></th>
+              <th class="hide-on-small-only"><a class="tooltipped" data-position="top" data-delay="50" data-tooltip="Goals Against">A</a></th>
+              <th><a class="tooltipped" data-position="top" data-delay="50" data-tooltip="Goal Difference">GD</a></th>
+              <th><a class="tooltipped" data-position="top" data-delay="50" data-tooltip="Points">P</a></th>
+              <th class="hide-on-small-only">Last 5 Matches</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="team in myTable.teamArray | orderBy:'-P'">
+              <td class="hide-on-small-only">{{($index+1)}}</td>
+              <td>{{team.name}}</td>
+              <td>{{team.MP}}</td>
+              <td>{{team.W}}</td>
+              <td>{{team.D}}</td>
+              <td>{{team.L}}</td>
+              <td class="hide-on-small-only">{{team.F}}</td>
+              <td class="hide-on-small-only">{{team.A}}</td>
+              <td>{{team.GD}}</td>
+              <td>{{team.P}}</td>
+              <td class="hide-on-small-only"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>

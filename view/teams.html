@@ -1,0 +1,6 @@
+<section class="container" id="team" ng-controller="teamController as myTeam">
+	<div class="carousel" id="carousel" >
+		<h4 class="center-align"> Teams </h4>
+		<a class="carousel-item" uisref="#one!" ng-repeat="team in myTeam.teams"><img ng-src={{team.imgSrc}}><p class="center-align">{{team.name}}</p></a>
+	</div>
+</section>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app="eplApp">
+<head>
+  <!--Import Google Icon Font-->
+  <link ui-sref="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" ui-sref="css/materialize.min.css">
+
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+
+  body {
+    margin: 8px;
+    background-color: #2A0B2F;
+  }
+
+  #logo {
+    max-height: 1em;
+  }
+
+  nav {
+    background-color: #F7286E;
+    height: 4em;
+  }
+
+  label {
+    color: white;
+  }
+
+  #carousel {
+    background-color: white;
+  }
+
+
+</style>
+</head>
+
+<body>
+  <script src="https://use.fontawesome.com/5aafece338.js"></script>
+
+
+  <nav ng-controller="yearController as myYear">
+    <div class="nav-wrapper">
+      <a ui-sref="home" class="brand-logo"><img src="img/logo.png" class="responsive-img" id="logo"></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a ui-sref="matches">Matches</a></li>
+        <li><a ui-sref="table">Table</a></li>
+        <li><a ui-sref="teams">Teams</a></li>
+        <li>
+          <form action="#">
+            <input name="group1" ng-model="myYear.year" type="radio" id="2015/16" value="2015/16" ng-click="myYear.change()"/>
+            <label for="2015/16">2015/16</label>
+            <input name="group1" ng-model="myYear.year" type="radio" id="2016/17" value="2016/17" ng-click="myYear.change()"/>
+            <label for="2016/17">2016/17</label>    
+          </form>     
+        </li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a ui-sref="matches">Matches</a></li>
+        <li><a ui-sref="table">Table</a></li>
+        <li><a ui-sref="teams">Teams</a></li>
+        <li>
+          <form action="#" ng-model="myApp.year">
+            <input name="group1" ng-model="myYear.year" type="radio" id="2015/16" value="2015/16" ng-click="myYear.change()" />
+            <label for="2015/16" style="color: black">2015/16</label><br>
+            <input name="group1" ng-model="myYear.year" type="radio" id="2016/17" value="2016/17" ng-click="myYear.change()" />
+            <label for="2016/17" style="color: black">2016/17</label>    
+          </form>       
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <ui-view></ui-view>
+  </main>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/routing.js"></script>
+
+</body>
+
+</html>
