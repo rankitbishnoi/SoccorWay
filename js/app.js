@@ -4,7 +4,7 @@ $( document ).ready(function(){
 	$('.carousel').carousel();
 });
 
-var myapp = angular.module("eplApp",['ui.router','ui.materialize']);
+var myapp = angular.module("eplApp",['ui.router']);
 
 myapp.service('dataService', function() {
 
