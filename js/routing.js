@@ -31,4 +31,4 @@ myapp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $
             controller: "teamsController",
             controllerAs : "myTeams"
         })
-}]);
+}]);*/

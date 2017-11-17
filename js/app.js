@@ -1,7 +1,4 @@
 $( document ).ready(function(){
-	$(".button-collapse").sideNav();
-	$('select').material_select();
-	$('.carousel').carousel();
 });
 
 var myapp = angular.module("eplApp",['ui.router']);
