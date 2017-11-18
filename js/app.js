@@ -1,10 +1,3 @@
-$( document ).ready(function(){
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip()
-	});
-	$('.myslider').myslider();
-});
-
 var myapp = angular.module("eplApp",['ui.router']);
 
 myapp.filter('range', function() {
@@ -125,6 +118,12 @@ myapp.service('ArrayManipulationForTable', function() {
 	}
 });
 
+myapp.directive("tooltip",[function(){
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	});
+	$('.myslider').myslider();
+}])
 
 myapp.controller("yearController",["dataService","$rootScope", function(dataService, $rootScope){
 	var self = this;
