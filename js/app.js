@@ -133,9 +133,14 @@ myapp.controller("yearController",["dataService","$rootScope", function(dataServ
 		dataService.setyear(self.year);
 		$rootScope.$broadcast("CallLoadAllData", {});
 	}
-	self.headerYear = dataService.getyear;
+	
 	self.header = dataService.getchangeheader();
+	self.headerYear = dataService.getyear();
 
+	$rootScope.$on("CallLoadAllData", function(){
+		self.headerYear = dataService.getyear();
+	});
+	
 	$rootScope.$on("Callchangeheader", function(){
 		self.header = dataService.getchangeheader();
 	});
