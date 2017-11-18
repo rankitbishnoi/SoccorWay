@@ -73,8 +73,17 @@ header h3 {
   color: black;
 }
 
+#summary {
+  background-color: white;
+}
+
 #matches h4{
   padding-top: 2em;
+}
+
+#summary h4{
+  padding-top: 2em;
+  padding-bottom: 1em;
 }
 
 #leagueTable h4{
