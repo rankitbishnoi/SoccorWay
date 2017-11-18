@@ -27,7 +27,7 @@ myapp.service('dataService', function() {
   	getchangeheader : function(){
   		retunr header;
   	},
-  	getyear: function () {
+  	getyear: function (){
   		return year;
   	},
   	setyear: function(value) {
