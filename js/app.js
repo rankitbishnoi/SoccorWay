@@ -1,7 +1,21 @@
 $( document ).ready(function(){
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	});
+	$('.myslider').myslider();
 });
 
 var myapp = angular.module("eplApp",['ui.router']);
+
+myapp.filter('range', function() {
+	return function(input, min, max) {
+    min = parseInt(min); //Make string input int
+    max = parseInt(max);
+    for (var i=min; i<max; i++)
+    	input.push(i);
+    return input;
+};
+});
 
 myapp.service('dataService', function() {
 
@@ -137,23 +151,18 @@ myapp.controller("matchesController",["$http", "dataService", "$rootScope", func
           // this callback will be called asynchronously
           // when the response is available
           self.matchWeeks = response.data.rounds;
-     }, function errorCallback(response) {
+      }, function errorCallback(response) {
           // called asynchronously if an error occurs
           // or server returns response with an error status.
           alert("some error occurred. Check the console.");
           console.log(response);
 
-     });
+      });
 	}
 
 	$rootScope.$on("CallLoadAllData", function(){
 		self.loadAllData();
 	});
-
-	self.toast = function(day) {
-		Materialize.toast(day,2000);
-		return 0;
-	}
 }]);
 
 
@@ -179,13 +188,13 @@ myapp.controller("tableController",["$http", "dataService", "$rootScope", "Array
           // when the response is available
           self.matchWeeks = response.data.rounds;
           self.teamArray = ArrayManipulationForTable.manipulation(self.matchWeeks,self.weekSelect);
-     }, function errorCallback(response) {
+      }, function errorCallback(response) {
           // called asynchronously if an error occurs
           // or server returns response with an error status.
           alert("some error occurred. Check the console.");
           console.log(response);
 
-     });
+      });
 	}
 
 	self.callManipulation = function () {

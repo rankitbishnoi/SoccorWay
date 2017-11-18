@@ -1,83 +1,23 @@
-<!DOCTYPE html>
-<html ng-app="eplApp">
+<!doctype html>
+<html lang="en" ng-app="eplApp">
 <head>
-  <!--Import materialize.css-->
-  <link rel="stylesheet" ui-sref="css/bootstrap.min.css">
+  <title>SoccerWay</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <style>
-
-  body {
-    margin: 8px;
-    background-color: #2A0B2F;
-  }
-
-  #logo {
-    max-height: 1em;
-  }
-
-  nav {
-    background-color: #F7286E;
-    height: 4em;
-  }
-
-  label {
-    color: white;
-  }
-
-  #carousel {
-    background-color: white;
-  }
-
-  #homePage {
-    height: calc(100vh - 4em);
-    background: url("img/homeBack.jpg");
-    background-size: cover;
-  }
-
-  #welcomeQouteParent {
-    display: table;
-    height: 100%;
-    width: 100%;
-  }
-
-  #child {
-    display: table-cell;
-    vertical-align: middle;
-  }
-
-  #child>h1 {
-    white-space: nowrap;
-    font-size: 7vw;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  #child>h6 {
-    font-weight: 350;
-    font-size: 4vmin;
-    margin-right: 15vw;
-    margin-left: 15vw;
-  }
-
-  #child>a {
-    background-color: #F7286E;
-    margin-top: 2em;
-  }
-
-
-</style>
 </head>
-
 <body>
   <script src="https://use.fontawesome.com/5aafece338.js"></script>
 
   <nav class="navbar navbar-expand-md" ng-controller="yearController as myYear">
-    <a class="navbar-brand" ui-sref="home"><img src="img/logo.png" class="responsive-img" id="logo"></a>
+    <a class="navbar-brand" ui-sref="home"><img src="img/logo.png" class="img-responsive" id="logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon">Menu</span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -90,31 +30,34 @@
         </li>
         <li class="nav-item active">
           <a class="nav-link" ui-sref="teams">Teams <span class="sr-only">(current)</span></a>
-        </li>
-        <li>
-          <form action="#" ng-model="myApp.year">
-            <input name="group1" ng-model="myYear.year" type="radio" id="2015/16" value="2015/16" ng-click="myYear.change()" />
-            <label for="2015/16">2015/16</label>
-            <input name="group1" ng-model="myYear.year" type="radio" id="2016/17" value="2016/17" ng-click="myYear.change()" />
-            <label for="2016/17" style="color: black">2016/17</label>    
-          </form>       
-        </li>        
+        </li>       
       </ul>
+      <form action="#" ng-model="myApp.year" class="form-inline">
+        <input name="group1" ng-model="myYear.year" type="radio" id="2015/16" value="2015/16" ng-click="myYear.change()" />
+        <label for="2015/16">2015/16</label>
+        <input name="group1" ng-model="myYear.year" type="radio" id="2016/17" value="2016/17" ng-click="myYear.change()" />
+        <label for="2016/17">2016/17</label>    
+      </form>   
     </div>
   </nav>
 
+  
   <main>
-    <div ui-view></div>
+     <div ui-view></div>
+
   </main>
 
-  <!--Import jQuery before materialize.js-->
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
   <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+  <script src="js/materialize.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript" src="js/routing.js"></script>
 </body>
-
 </html>

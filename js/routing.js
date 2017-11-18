@@ -1,4 +1,3 @@
-/*
 myapp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/home');
@@ -31,4 +30,4 @@ myapp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $
             controller: "teamsController",
             controllerAs : "myTeams"
         })
-}]);*/
+}]);
