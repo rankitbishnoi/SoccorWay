@@ -141,7 +141,7 @@ myapp.controller("yearController",["dataService","$rootScope", function(dataServ
 	});
 }]);
 
-myapp.controller("homeController",["dataService", function(dataService){
+myapp.controller("homeController",["dataService", "$rootScope", function(dataService,$rootScope){
 	dataService.changeheader(true);
 	$rootScope.$broadcast("Callchangeheader", {});
 }]);
