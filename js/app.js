@@ -196,6 +196,8 @@ myapp.controller("matchesController",["$http", "dataService", "$rootScope", func
 			match : self.matchWeeks[(self.weekSelect-1)].matches[index]
 		};
 		dataService.setsingleMatch(value);
+		console.log(value);
+		console.log(dataService.getsingleMatch());
 	}
 }]);
 
@@ -357,6 +359,6 @@ myapp.controller('summaryController',["$rootScope","dataService", function($root
 
 myapp.controller('singleMatchController', ["dataService", function(dataService){
 	var self = this;
-	self.match = dataService.getsingleMatch();
+	self.data = dataService.getsingleMatch();
 
 }])
