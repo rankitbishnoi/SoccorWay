@@ -16,14 +16,14 @@ myapp.service('dataService', function() {
   var year = "2016/17";
   var self = this;
   self.header = true;
-  self.changeheader = function(newvalue) {
-  	self.header = newvalue;
-  }
 
 
 
   // public API
   return {
+  	changeheader : function(newvalue) {
+  		self.header = newvalue;
+  	}
   	getyear: function () {
   		return year;
   	},
