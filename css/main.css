@@ -110,3 +110,12 @@ header h3 {
   background-color: white;
   color: black;
 }
+
+#singlematch h4 {
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+#singlematch img {
+  padding-bottom: 3em;
+}
