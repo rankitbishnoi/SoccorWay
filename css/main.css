@@ -19,7 +19,7 @@ nav {
 
 #homePage {
   height: calc(100vh - 4em);
-  background: url("img/homeBack.jpg");
+  background: url("../img/homeBack.jpg");
   background-size: cover;
 }
 
@@ -68,7 +68,7 @@ nav {
 
 #team {
   text-align: center;
-  background : url("img/teamback.jpg");
+  background : url("../img/teamback.jpg");
   background-size: cover;
 }
 
