@@ -7,7 +7,9 @@ myapp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $
         // HOME STATES
         .state('home', {
             url: '/home',
-            templateUrl: 'view/homepage.html'
+            templateUrl: 'view/homepage.html',
+            controller: 'homeController',
+            controllerAs: 'myhome'
         })
 
         .state('matches', {
