@@ -228,7 +228,7 @@ myapp.controller("tableController",["$http", "dataService", "$rootScope", "Array
 	});
 }]);
 
-myapp.controller('teamController',["dataService", function(dataService){
+myapp.controller('teamController',["dataService","$rootScope" function(dataService,$rootScope){
 	var self = this;
 
 	dataService.changeheader(false);
