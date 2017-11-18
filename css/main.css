@@ -13,6 +13,10 @@ nav {
   color: white;
 }
 
+#navbarSupportedContent {
+  background-color: hsl(339, 100%, 50%);
+}
+
 .navbar-toggler-icon {
   color: white;
 }
