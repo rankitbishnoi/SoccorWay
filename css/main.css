@@ -119,3 +119,8 @@ header h3 {
 #singlematch img {
   padding-bottom: 3em;
 }
+
+#singlematch button {
+  padding-left: 2em;
+  padding-bottom: 2em;
+}
