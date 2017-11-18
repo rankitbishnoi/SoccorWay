@@ -135,11 +135,11 @@ myapp.controller("yearController",["dataService","$rootScope", function(dataServ
 	}
 	self.headerYear= dataService.getyear;
 	self.header = dataService.header;
-}])
+}]);
 
 myapp.controller("homeController",["dataService", function(dataService){
 	dataService.changeheader(true);
-}])
+}]);
 
 myapp.controller("matchesController",["$http", "dataService", "$rootScope", function($http,dataService,$rootScope){
 	var self = this;
