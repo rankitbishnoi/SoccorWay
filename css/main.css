@@ -120,7 +120,7 @@ header h3 {
   padding-bottom: 3em;
 }
 
-#singlematch button {
+#singlematch #backbtn {
   padding-left: 2em;
   padding-bottom: 2em;
 }
