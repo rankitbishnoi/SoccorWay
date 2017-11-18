@@ -119,9 +119,7 @@ myapp.service('ArrayManipulationForTable', function() {
 });
 
 myapp.directive("tooltip",[function(){
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip()
-	});
+	$('[data-toggle="tooltip"]').tooltip();
 	$('.myslider').myslider();
 }])
 
