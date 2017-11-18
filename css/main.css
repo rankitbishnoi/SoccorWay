@@ -75,15 +75,21 @@ header h3 {
 
 #summary {
   background-color: white;
+  color: black;
 }
 
-#matches h4{
-  padding-top: 2em;
+#details {
+  padding-top: 1em;
+  padding-bottom: 2em;
 }
 
 #summary h4{
   padding-top: 2em;
   padding-bottom: 1em;
+}
+
+#matches h4{
+  padding-top: 2em;
 }
 
 #leagueTable h4{
