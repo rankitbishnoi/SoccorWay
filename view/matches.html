@@ -19,7 +19,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="matchday in myMatches.matchWeeks[(myMatches.weekSelect-1)].matches" ng-click="myMatches.saveData($index)">
+        <tr ng-repeat="matchday in myMatches.matchWeeks[(myMatches.weekSelect-1)].matches" ng-click="myMatches.saveData($index)" ui-sref="singlematch">
           <td class="d-none d-sm-none d-md-block" ng-show="matchday.date != myMatches.matchWeeks[(myMatches.weekSelect-1)].matches[$index-1].date">{{matchday.date | date:'EEEE' }}</td>
           <td class="d-sm-none d-none d-md-block" ng-show="matchday.date == myMatches.matchWeeks[(myMatches.weekSelect-1)].matches[$index-1].date"> </td>
           <td ng-show="matchday.date != myMatches.matchWeeks[(myMatches.weekSelect-1)].matches[$index-1].date" ng-bind="matchday.date | date:'mediumDate'"></td>

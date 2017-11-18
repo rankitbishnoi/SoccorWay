@@ -38,6 +38,12 @@ myapp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $
             templateUrl: 'view/summary.html',
             controller: 'summaryController',
             controllerAs: 'mySummary'
+        })
 
+        .state('singlematch',{
+            url: '/singlematch',
+            templateUrl: 'view/singlematch.html',
+            controller: 'singleMatchController',
+            controllerAs: 'mySingleMatch'
         })
 }]);
