@@ -23,7 +23,10 @@ myapp.service('dataService', function() {
   return {
   	changeheader : function(newvalue) {
   		header = newvalue;
-  	}
+  	},
+  	getchangeheader : function(){
+  		retunr header;
+  	},
   	getyear: function () {
   		return year;
   	},
@@ -131,7 +134,7 @@ myapp.controller("yearController",["dataService","$rootScope", function(dataServ
 		$rootScope.$broadcast("CallLoadAllData", {});
 	}
 	self.headerYear = dataService.getyear();
-	self.header = dataService.header;
+	self.header = dataService.getchangeheader();
 }]);
 
 myapp.controller("homeController",["dataService", function(dataService){
