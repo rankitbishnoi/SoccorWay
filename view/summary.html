@@ -1,7 +1,9 @@
-<section class="container" ng-controller="summaryController as mySummary">
+<section class="container" ng-controller="summaryController as mySummary" id="summary">
 	<div>
-		<h4>{{mySummary.heading}}</h4>
+		<h4>{{mySummary.heading}} :</h4>
 		<img ng-src={{mySummary.imgsrc}} width=100% class="d-flex justify-content-center">		
-		<p>{{mySummary.details}}</p>
+		<div ng-repeat ="detail in mySummary.details">
+			<p>{{detail}}</p>
+		</div>
 	</div>
 </section>
