@@ -135,10 +135,15 @@ myapp.controller("yearController",["dataService","$rootScope", function(dataServ
 	}
 	self.headerYear = dataService.getyear();
 	self.header = dataService.getchangeheader();
+
+	$rootScope.$on("CallLoadAllData", function(){
+		self.header = dataService.getchangeheader();
+	});
 }]);
 
 myapp.controller("homeController",["dataService", function(dataService){
 	dataService.changeheader(true);
+	$rootScope.$broadcast("Callchangeheader", {});
 }]);
 
 myapp.controller("matchesController",["$http", "dataService", "$rootScope", function($http,dataService,$rootScope){
@@ -148,6 +153,7 @@ myapp.controller("matchesController",["$http", "dataService", "$rootScope", func
 	self.year = dataService.getyear;
 
 	dataService.changeheader(false);
+	$rootScope.$broadcast("Callchangeheader", {});
 
 	self.loadAllData = function(){
 
@@ -187,6 +193,7 @@ myapp.controller("tableController",["$http", "dataService", "$rootScope", "Array
 	self.teamArray= [];
 
 	dataService.changeheader(false);
+	$rootScope.$broadcast("Callchangeheader", {});
 	self.loadAllData = function(){
 
 		if (self.year()==="2015/16") {
@@ -225,6 +232,7 @@ myapp.controller('teamController',["dataService", function(dataService){
 	var self = this;
 
 	dataService.changeheader(false);
+	$rootScope.$broadcast("Callchangeheader", {});
 	self.teams = [
 	{
 		name : "Manchester United",
