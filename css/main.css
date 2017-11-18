@@ -17,6 +17,11 @@ nav {
   color: white;
 }
 
+header {
+  background: #38003c;
+  background-image: url("../img/header.png");
+}
+
 #homePage {
   height: calc(100vh - 4em);
   background: url("../img/homeBack.jpg");
