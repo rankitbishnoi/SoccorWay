@@ -23,7 +23,7 @@ myapp.service('dataService', function() {
   var year = "2016/17";
   var self = this;
   self.header = true;
-  this.changeheader = function(newvalue) {
+  self.changeheader = function(newvalue) {
   	self.header = newvalue;
   }
 
