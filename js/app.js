@@ -145,7 +145,7 @@ myapp.directive("tooltips"[function(){
 	return {
         restrict: 'A',
         link: function(scope, element, attrs) {
-            angular.element(element).tooltip(scope.$eval(attrs.directiveName));
+            element.tooltip();
         }
     };
 }])
@@ -153,8 +153,8 @@ myapp.directive("tooltips"[function(){
 myapp.directive("carousels"[function(){
 	return {
         restrict: 'A',
-        link: function(scope, element, attrs) {
-            angular.element(element).carousel(scope.$eval(attrs.directiveName));
+        link: function(scope,element.attrs) {
+            element.carousel();
         }
     };
 }])
