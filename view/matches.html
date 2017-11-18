@@ -23,7 +23,6 @@
           <td class="d-none d-sm-none d-md-block" ng-show="matchday.date != myMatches.matchWeeks[(myMatches.weekSelect-1)].matches[$index-1].date">{{matchday.date | date:'EEEE' }}</td>
           <td class="d-sm-none d-none d-md-block" ng-show="matchday.date == myMatches.matchWeeks[(myMatches.weekSelect-1)].matches[$index-1].date"> </td>
           <td ng-show="matchday.date != myMatches.matchWeeks[(myMatches.weekSelect-1)].matches[$index-1].date" ng-bind="matchday.date | date:'mediumDate'"></td>
-          <td ng-show="matchday.date == myMatches.matchWeeks[(myMatches.weekSelect-1)].matches[$index-1].date"> </td>
           <td class="text-right d-sm-block d-md-none d-lg-none">{{ matchday.team1.code }}</td><td class="text-right d-sm-none d-none d-md-block">{{ matchday.team1.name }}</td>
           <td class="text-center">{{ matchday.score1 }} : {{ matchday.score2 }}</td>
           <td class="d-sm-block d-md-none d-lg-none">{{ matchday.team2.code }}</td><td class="d-sm-none d-none d-md-block">{{ matchday.team2.name }}</td>
