@@ -153,7 +153,7 @@ myapp.directive("tooltips"[function(){
 myapp.directive("carousels"[function(){
 	return {
         restrict: 'A',
-        link: function(scope,element.attrs) {
+        link: function(scope, element, attrs) {
             element.carousel();
         }
     };
