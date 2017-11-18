@@ -317,3 +317,16 @@ myapp.controller('teamController',["dataService","$rootScope", function(dataServ
 	];
 }])
 
+myapp.controller('summaryController',["$rootScope","dataService", function($rootScope,dataService){
+	var self = this;
+	self.imgsrc = "img/2016summary.jpg";
+	$rootScope.$on("CallLoadAllData", function(){
+		var year = dataService.getyear();
+		if (year === "2016/17") {
+			self.imgSrc = "img/2016summary.jpg";
+		}else {
+			self.imgsrc = 'img/2015summary.jpg';
+		}
+	});
+}])
+

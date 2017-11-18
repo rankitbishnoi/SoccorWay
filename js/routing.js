@@ -32,4 +32,12 @@ myapp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $
             controller: "teamController",
             controllerAs : "myTeams"
         })
+
+        .state('summary',{
+            url: '/summary',
+            templateUrl: 'view/summary.html',
+            controller: 'summaryController',
+            controllerAs: 'mySummary'
+
+        })
 }]);
