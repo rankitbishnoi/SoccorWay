@@ -1,4 +1,4 @@
-var myapp = angular.module("eplApp",['ui.router','bootstrap']);
+var myapp = angular.module("eplApp",['ui.router']);
 
 myapp.filter('range', function() {
 	return function(input, min, max) {
@@ -140,24 +140,6 @@ myapp.controller("yearController",["dataService","$rootScope", function(dataServ
 		self.header = dataService.getchangeheader();
 	});
 }]);
-
-myapp.directive("tooltips"[function(){
-	return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            element.tooltip();
-        }
-    };
-}])
-
-myapp.directive("carousels"[function(){
-	return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            element.carousel();
-        }
-    };
-}])
 
 myapp.controller("homeController",["dataService", "$rootScope", function(dataService,$rootScope){
 	dataService.changeheader(true);
