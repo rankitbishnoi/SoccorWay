@@ -128,6 +128,7 @@ myapp.controller("yearController",["dataService","$rootScope", function(dataServ
 		dataService.setyear(self.year);
 		$rootScope.$broadcast("CallLoadAllData", {});
 	}
+	self.headerYear= dataService.getyear;
 }])
 
 myapp.controller("matchesController",["$http", "dataService", "$rootScope", function($http,dataService,$rootScope){
