@@ -121,11 +121,6 @@ myapp.service('ArrayManipulationForTable', function() {
 	}
 });
 
-myapp.directive("tooltips",[function(){
-	$('[data-toggle="tooltip"]').tooltip();
-	$('.myslider').myslider();
-}])
-
 myapp.controller("yearController",["dataService","$rootScope", function(dataService, $rootScope){
 	var self = this;
 	self.year = "2016/17";
