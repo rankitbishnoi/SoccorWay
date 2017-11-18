@@ -20,10 +20,11 @@ nav {
 header {
   background: #38003c;
   background-image: url("../img/header.png");
+  background-size: cover;
 }
 
 header h3 {
-  padding: 2em;
+  padding: 1em 2em;
 }
 
 #homePage {
