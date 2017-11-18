@@ -14,13 +14,20 @@ myapp.service('dataService', function() {
 
   // private variable
   var year = "2016/17";
-  var self = this;
   var header = true;
+  var singleMatch;
+
 
 
 
   // public API
   return {
+  	getsingleMatch : function() {
+  		return singleMatch;
+  	},
+  	setsingleMatch : function(value) {
+  		singleMatch = value;
+  	},
   	changeheader : function(newvalue) {
   		header = newvalue;
   	},
@@ -182,6 +189,13 @@ myapp.controller("matchesController",["$http", "dataService", "$rootScope", func
 	$rootScope.$on("CallLoadAllData", function(){
 		self.loadAllData();
 	});
+
+	self.saveData = function(index) {
+		var value = self.matchWeeks[self.weekSelect].matches[index];
+		console.log(value);
+		dataService.setsingleMatch(value);
+		console.log(dataService.getsingleMatch());
+	}
 }]);
 
 
