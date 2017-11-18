@@ -141,6 +141,24 @@ myapp.controller("yearController",["dataService","$rootScope", function(dataServ
 	});
 }]);
 
+myapp.directive("tooltips"[function(){
+	return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            angular.element(element).tooltip(scope.$eval(attrs.directiveName));
+        }
+    };
+}])
+
+myapp.directive("carousels"[function(){
+	return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            angular.element(element).carousel(scope.$eval(attrs.directiveName));
+        }
+    };
+}])
+
 myapp.controller("homeController",["dataService", "$rootScope", function(dataService,$rootScope){
 	dataService.changeheader(true);
 	$rootScope.$broadcast("Callchangeheader", {});
