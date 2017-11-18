@@ -190,8 +190,8 @@ myapp.controller("matchesController",["$http", "dataService", "$rootScope", func
 		self.loadAllData();
 	});
 
-	self.saveData = function(index) {console.log(index);console.log(self.weekSelect);
-		var value = self.matchWeeks[self.weekSelect].matches[index];
+	self.saveData = function(index) {
+		var value = self.matchWeeks[(self.weekSelect-1)].matches[index];
 		console.log(value);
 		dataService.setsingleMatch(value);
 		console.log(dataService.getsingleMatch());
