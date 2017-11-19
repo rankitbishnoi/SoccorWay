@@ -1,10 +1,20 @@
 <section id="team" ng-controller="teamController as myTeam" class="container">
 	<div>
 		<h4 class="center-align"> Clubs </h4>
-		<ul rn-carousel class="image">
-			<li ng-repeat="team in myTeam.teams">
-				<div class="layer"><img ng-src={{team.imgSrc}}><p class="center-align">{{team.name}}</p></div>
-			</li>
-		</ul>
-	</div>
+		<ui-carousel 
+		slides="ctrl.slides"
+		slides-to-show="3"
+		slides-to-scroll="1"
+		initial-slide="1"
+		autoplay="true"
+		autoplay-speed="2000"
+		dots="true">
+		<carousel-item>
+			<div ng-repeat="team in myTeam.teams">
+				<img ng-src={{team.imgSrc}}>
+				<h3>{{team.name}}</h3>
+			</div>
+		</carousel-item>
+	</ui-carousel>
+</div>
 </section>
