@@ -51,7 +51,8 @@
 
  </main>
 
- <footer>
+ <footer ng-controller="yearController as myYear" ng-hide="myYear.header">
+  <hr>
   <div class="row">
     <div class="col-sm-4">
       <div class="card">
@@ -81,12 +82,12 @@
       </div>
     </div>
   </div>
-  <div class="footer-copyright">
-    <div>
-      © 2017 Copyright Rankit Bishnoi
-    </div>
-  </div>
 </footer>
+<div class="footer-copyright">
+  <div>
+    © 2017 Copyright Rankit Bishnoi
+  </div>
+</div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
