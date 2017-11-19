@@ -127,11 +127,15 @@ header h3 {
 
 footer {
   color: white;
-  background-color: hsl(157, 64%, 46%);
+  background-color: hsl(296, 100%, 12%);
   padding: 2em;
 }
 
 footer .card {
-  background-color: hsl(157, 64%, 46%);
-  border: 3px solid rgba(0,0,0,.125);
+  background-color: hsl(296, 100%, 12%);
+  border: 3px solid hsl(0, 0%, 95%);
+}
+
+footer .footer-copyright {
+
 }
