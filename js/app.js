@@ -1,4 +1,4 @@
-var myapp = angular.module("eplApp",['ui.router']);
+var myapp = angular.module("eplApp",['ui.router','angular-carousel']);
 
 myapp.filter('range', function() {
 	return function(input, min, max) {

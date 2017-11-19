@@ -1,6 +1,6 @@
 <section id="team" ng-controller="teamController as myTeam" class="container">
-	<div class="myslider" >
+	<div  rn-carousel class="image">
 		<h4 class="center-align"> Clubs </h4>
-		<a class="myslider-item" ng-repeat="team in myTeam.teams"><img ng-src={{team.imgSrc}}><p class="center-align">{{team.name}}</p></a>
+		<a class="layer" ng-repeat="team in myTeam.teams"><img ng-src={{team.imgSrc}}><p class="center-align">{{team.name}}</p></a>
 	</div>
 </section>
