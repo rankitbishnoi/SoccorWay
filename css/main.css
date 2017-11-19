@@ -126,7 +126,12 @@ header h3 {
 }
 
 footer {
-  color: black;
+  color: white;
   background-color: hsl(157, 64%, 46%);
   padding: 2em;
+}
+
+footer .card {
+  background-color: hsl(157, 64%, 46%);
+  border: 3px solid rgba(0,0,0,.125);
 }
