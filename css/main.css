@@ -124,3 +124,9 @@ header h3 {
   padding-left: 2em;
   padding-bottom: 2em;
 }
+
+footer {
+  color: black;
+  background-color: hsl(157, 64%, 46%);
+  padding: 2em;
+}
