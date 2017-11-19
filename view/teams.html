@@ -9,11 +9,9 @@
 		autoplay="true"
 		autoplay-speed="2000"
 		dots="true">
-		<carousel-item>
-			<div ng-repeat="team in myTeam.teams">
+		<carousel-item ng-repeat="team in myTeam.teams">
 				<img ng-src={{team.imgSrc}}>
 				<h3>{{team.name}}</h3>
-			</div>
 		</carousel-item>
 	</ui-carousel>
 </div>
