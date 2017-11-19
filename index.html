@@ -46,20 +46,59 @@
   </header>
 
   <main>
-   <div ui-view></div>
+   <div ui-view>
+
+   </div>
 
  </main>
 
- <!-- Optional JavaScript -->
- <!-- jQuery first, then Popper.js, then Bootstrap JS -->
- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>  
- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
- <script src="js/angular-touch.js"></script>
- <script src="js/ui-carousel.min.js"></script>
- <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
- <script type="text/javascript" src="js/app.js"></script>
- <script type="text/javascript" src="js/routing.js"></script>
+ <footer>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Summary</h4>
+          <p class="card-text">All that happened in the cup. To get an overview:</p>
+          <a ui-sref="summary" class="btn btn-primary">Visit</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Matches</h4>
+          <p class="card-text">Find all the macthes happened in the Premier league cup. Filterred by weeks.</p>
+          <a ui-sref="matches" class="btn btn-primary">Visit</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Table</h4>
+          <p class="card-text">All the team stats are shown in tabular form. You can filter them by weeks in premier league cup too.</p>
+          <a ui-sref="table" class="btn btn-primary">Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2017 Copyright Rankit Bishnoi
+    </div>
+  </div>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+<script src="js/angular-touch.js"></script>
+<script src="js/ui-carousel.min.js"></script>
+<script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/routing.js"></script>
 </body>
 </html>
