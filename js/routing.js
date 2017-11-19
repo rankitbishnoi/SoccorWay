@@ -26,13 +26,6 @@ myapp.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $
             controllerAs : "myTable"
         })
 
-        .state('teams', {
-            url: '/teams',
-            templateUrl: 'view/teams.html',
-            controller: "teamController",
-            controllerAs : "myTeams"
-        })
-
         .state('summary',{
             url: '/summary',
             templateUrl: 'view/summary.html',
